@@ -28,7 +28,7 @@ def start_pannel():
                 InlineKeyboardButton(text="💭 Group", url="https://t.me/mzxisupport")
             ],
     ]
-    return "✨  **Welcome to veez music mega bot.**", buttons
+    return "✨  **Welcome to Mazhuixi Robot.**", buttons
 
 pstart_markup=InlineKeyboardMarkup(
             [
