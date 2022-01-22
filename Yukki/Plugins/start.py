@@ -21,11 +21,11 @@ from Yukki.YukkiUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="📚 Commands", url="https://telegra.ph/Veez-Mega-Guide-01-10")
+                InlineKeyboardButton(text="📚 Commands", url="https://telegra.ph/Mazhuixi-Robot-Guid-01-22")
             ],
             [ 
-                InlineKeyboardButton(text="📣 Channel", url="https://t.me/levinachannel"),
-                InlineKeyboardButton(text="💭 Group", url="https://t.me/VeezSupportGroup")
+                InlineKeyboardButton(text="📣 Channel", url="https://t.me/mzxiinhere"),
+                InlineKeyboardButton(text="💭 Group", url="https://t.me/mzxisupport")
             ],
     ]
     return "✨  **Welcome to veez music mega bot.**", buttons
@@ -34,20 +34,20 @@ pstart_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to a Group ➕", url="https://t.me/VeezMegaBot?startgroup=true")
+                        "➕ Add me to a Group ➕", url="http://t.me/mzxirobot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "📚 Commands", url="https://telegra.ph/Veez-Mega-Guide-01-10"),
+                        "📚 Commands", url="https://telegra.ph/Mazhuixi-Robot-Guid-01-22"),
                     InlineKeyboardButton(
-                        "♥️ Donate", url="https://t.me/VMDonationBot")
+                        "♥️ Donate", url="http://t.me/mazxidntbot")
                 ],[
                     InlineKeyboardButton(
-                        "👥 Official Group", url="https://t.me/VeezSupportGroup"), 
+                        "👥 Official Group", url="https://t.me/mzxisupport"), 
                     InlineKeyboardButton(
-                        "📣 Official Channel", url="https://t.me/levinachannel")
+                        "📣 Official Channel", url="https://t.me/mzxiinhere")
                 ],[
                     InlineKeyboardButton(
-                        "❓ Setup Guide", url="https://telegra.ph/Veez-Mega-Guid-11-19")
+                        "❓ Setup Guide", url="https://telegra.ph/Mazhuixi-Robot-Guide-01-22")
                 ]
             ]
         )
@@ -57,14 +57,14 @@ welcome_captcha_group = 2
 async def welcome(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
-        await message.reply_text(f"❌ **not in allowed chat**\n\nveez mega is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+        await message.reply_text(f"❌ **not in allowed chat**\n\nmazhuixi robot is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)
     for member in message.new_chat_members:
         try:
             if member.id in OWNER:
-                return await message.reply_text(f"🧙🏻‍♂️ • {member.mention} •\n\n• **Staff** of Veez Mega has joined this Group.")
+                return await message.reply_text(f"🧙🏻‍♂️ • {member.mention} •\n\n• **Staff** of Mazhuixi-Robot has joined this Group.")
             if member.id in SUDOERS:
-                return await message.reply_text(f"🧙🏻‍♂️ • {member.mention} •\n\n• **Staff** of Veez Mega has joined this Group.")
+                return await message.reply_text(f"🧙🏻‍♂️ • {member.mention} •\n\n• **Staff** of Mazhuixi-Robot has joined this Group.")
             if member.id == ASSID:
                 await remove_active_chat(chat_id)
             if member.id == BOT_ID:
@@ -78,10 +78,10 @@ async def welcome(_, message: Message):
 async def start(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
-        await message.reply_text(f"❌ **not in allowed chat**\n\nveez mega is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+        await message.reply_text(f"❌ **not in allowed chat**\n\nmazhuiki robot is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)
     out = start_pannel()
-    await message.reply_text(f"✨ Hello {message.from_user.mention}, i'm a Veez Mega bot.\n\n💭 Appoint me as admin in your Group so i can play music, otherwise you can't use my service.", reply_markup=InlineKeyboardMarkup(out[1]))
+    await message.reply_text(f"✨ Hello {message.from_user.mention}, i'm a ᴍᴀᴢʜᴜɪxɪ ʀᴏʙᴏᴛ.\n\n💭 Appoint me as admin in your Group so i can play music, otherwise you can't use my service.", reply_markup=InlineKeyboardMarkup(out[1]))
     return
         
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
@@ -91,7 +91,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"✨ Welcome {rpk} !\n\n💭 [Veez Mega](https://t.me/VeezMegaBot) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
+            text=f"✨ Welcome {rpk} !\n\n💭 [ᴍᴀᴢʜᴜɪxɪ ʀᴏʙᴏᴛ](https://t.me/VeezMegaBot) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
             parse_mode="markdown",
             reply_markup=pstart_markup,
             reply_to_message_id=message.message_id,
@@ -122,7 +122,7 @@ async def play(_, message: Message):
 📣 **Channel:** {x["uploader"]}
 🔗 **Link:** {x["webpage_url"]}
 
-⚡️ __Powered by Veez Mega AI__"""
+⚡️ __Powered by ᴍᴀᴢʜᴜɪxɪ ʀᴏʙᴏᴛ AI__"""
             link = (x["webpage_url"])
             buttons = personal_markup(link)
             userid = message.from_user.id
